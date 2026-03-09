@@ -17,21 +17,21 @@ public class ObjectUseCase implements IObjectServicePort {
 
     @Override
     public void saveObject(ObjectModel objectModel) {
-
+        objectPersistencePort.saveObjectModel(objectModel);
     }
 
     @Override
-    public void updateObject(ObjectModel objectModel) {
-
+    public void updateObject(ObjectModel objectModel, Long id) {
+        objectPersistencePort.updateObjectModel(objectModel, id);
     }
 
     @Override
     public void deleteObject(ObjectModel objectModel) {
-
+        objectPersistencePort.deleteObjectModel(objectModel.getId());
     }
 
     @Override
     public List<ObjectModel> getAllObjectModels() {
-        return List.of();
+        return objectPersistencePort.getAllObjectModels();
     }
 }

@@ -6,5 +6,7 @@ import java.util.List;
 
 public interface IObjectPersistencePort {
     ObjectModel saveObjectModel(ObjectModel objectModel);
+    ObjectModel updateObjectModel(ObjectModel objectModel, Long id);
+    void deleteObjectModel(Long id);
     List<ObjectModel> getAllObjectModels();
 }
