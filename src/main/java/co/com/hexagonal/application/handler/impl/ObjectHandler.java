@@ -1,6 +1,7 @@
 package co.com.hexagonal.application.handler.impl;
 
 import co.com.hexagonal.application.dto.request.ObjectRequestDto;
+import co.com.hexagonal.application.dto.response.ObjectResponseDto;
 import co.com.hexagonal.application.handler.IObjectHandler;
 import co.com.hexagonal.application.mappper.IObjectRequestMapper;
 import co.com.hexagonal.application.mappper.IObjectResponseMapper;
@@ -27,7 +28,7 @@ public class ObjectHandler implements IObjectHandler {
     }
 
     @Override
-    public List<ObjectRequestDto> getObjects() {
+    public List<ObjectResponseDto> getObjects() {
         return List.of();
     }
 }
